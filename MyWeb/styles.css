@@ -1,23 +1,45 @@
+:root {
+    --nav-height: 8vh; /* 导航高度 */
+    --main-min-height: 750px; /* 主内容最小高度 */
+    --about-height: 850px; /* 关于部分高度 */
+    --contact-height: 850px; /* 联系部分高度 */
+    --advertise-height: 850px; /* 广告部分高度 */
+    --footer-height: 400px; /* 页脚高度 */
+    --button-width: 80px; /* 按钮宽度 */
+    --button-height: 50px; /* 按钮高度 */
+    --search-button-height: 30px; /* 搜索按钮高度 */
+    --icon-size: 40px; /* 图标大小 */
+    --font-size-large: 4rem; /* 大字体大小 */
+    --font-size-medium: 1.5rem; /* 中等字体大小 */
+    --font-size-small: 1rem; /* 小字体大小 */
+}
 
 body {
     width: 100%;
     height: 100vh; 
     background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
+    font-size: 100%; /* 基础字体大小 */
+    box-sizing: border-box; /* 使内边距和边框包含在元素的总宽度和高度中 */
+}
+
+* {
+    box-sizing: inherit; /* 继承 box-sizing 属性 */
 }
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 8vh; 
+    height: var(--nav-height); /* 使用变量 */
     background-color: aqua;
     display: flex;
     justify-content: space-between;
 }
 
-.Navigation .Navigation-left {
+.Navigation .Navigation-left,
+.Navigation .Navigation-center,
+.Navigation .Navigation-right {
     width: 30%;
-    margin-left: 0;
 }
 
 .Navigation .Navigation-left img {
@@ -28,22 +50,29 @@ nav {
 .Navigation .Navigation-center {
     width: 40%;
     margin: auto 0 auto 15px;
+    display: flex; /* 添加 flex 布局 */
 }
 
 .Navigation .Navigation-center input {
     margin: auto 3px;
-    width: 80%;
-    height: 30px;
-    font-size: 18px;
+    width: 80%; /* 输入框宽度 */
+    height: var(--search-button-height); /* 使用变量设置输入框高度 */
+    font-size: var(--font-size-medium); /* 使用变量设置字体大小 */
+    padding: 0 10px; /* 添加内边距 */
 }
 
 .Navigation .Navigation-center button {
-    margin: auto 3px;
-    height: 35px;
+    width: auto; /* 设置为自动宽度 */
+    height: var(--search-button-height); /* 设置按钮高度与输入框一致 */
+    margin-left: 3px; /* 添加左边距以分隔输入框和按钮 */
+    padding: 0 10px; /* 添加内边距以调整按钮宽度 */
+    font-size: var(--font-size-medium); /* 使用变量设置字体大小 */
+    display: flex; /* 使按钮内容居中 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
 }
 
 .Navigation .Navigation-right {
-    width: 30%;
     display: flex;
 }
 
@@ -58,18 +87,18 @@ nav {
 }
 
 .Navigation .Navigation-right .buttons button {
-    width: 80px;
-    height: 50px;
+    width: var(--button-width); /* 使用变量 */
+    height: var(--button-height); /* 使用变量 */
     margin-top: 13px;
     margin-bottom: 3px;
-	margin-right: 10px; /* 增加右边距以增加按钮间距 */
-	display: flex; /* 使用 flexbox 以便于内容居中 */
-	flex-direction: column; /* 垂直排列图标和文本 */
-	justify-content: center; /* 垂直居中对齐 */
-	align-items: center; /* 水平居中对齐 */
-	overflow: hidden; /* 确保文本不超出按钮框 */
-	text-overflow: ellipsis; /* 超出部分用省略号表示 */
-	white-space: nowrap; /* 确保文本在一行内显示 */
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .Navigation .Navigation-right .buttons button .button-content {
@@ -82,55 +111,48 @@ nav {
 }
 
 .Navigation .Navigation-right .buttons button p {
-    font-size: 12px;
-    margin-top: 3px; /* 调整文本与图标之间的间距 */
-    text-align: center; /* 确保文本居中对齐 */
-    font-size: 14px; /* 调整字体大小以适应按钮 */
-    display: block; /* 使文本在图标下方横向排列 */
+    font-size: var(--font-size-small); /* 使用变量 */
+    margin-top: 3px;
+    text-align: center;
+    display: block;
 }
 
 main .welcome {
     width: 100%;
-    height: auto; /* 使高度自适应内容 */
-    min-height: 750px; /* 设置最小高度 */
+    height: auto;
+    min-height: var(--main-min-height); /* 使用变量 */
     background: linear-gradient(45deg, #A8C1EF, #F9C2EA);
 }
 
-#p-first {
+#p-first,
+#p-last {
     font-family: "Lucida Console", Courier, monospace;
     margin-top: 200px;
     text-align: center;
-    font-size: 50px;
-}
-
-#p-last {
-    font-family: "Lucida Console", Courier, monospace;
-    margin-top: 100px;
-    text-align: center;
-    font-size: 50px;
+    font-size: var(--font-size-large); /* 使用变量 */
 }
 
 main .welcome h1 {
     text-align: center;
     margin-top: 100px;
-    font-size: 100px;
+    font-size: var(--font-size-large); /* 使用变量设置字体大小 */
 }
 
 main .about {
     width: 100%;
-    height: 850px;
+    height: var(--about-height); /* 使用变量 */
     background: linear-gradient(-45deg, #F78EA5, #DDD2A4);
 }
 
 main .about h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: var(--font-size-medium); /* 使用变量 */
     padding: 80px 0 40px 0;
 }
 
 main .about .about-welcome {
     display: flex;
-	align-items: center; 
+    align-items: center; 
 }
 
 main .about .about-welcome .development {
@@ -150,24 +172,24 @@ main .about .about-welcome .development ul li a {
 
 main .about .about-welcome .workplace {
     width: 50%;
-	margin-left: -20%;
-	display: flex;
-	justify-content: center; 
+    margin-left: -20%;
+    display: flex;
+    justify-content: center; 
 }
 
 main .about .about-welcome .workplace img {
     width: 80%;
-	height: auto;
+    height: auto;
 }
 
 main .contact {
     width: 100%;
-    height: 850px;
+    height: var(--contact-height); /* 使用变量 */
 }
 
 main .contact h2 {
     text-align: center;
-    font-size: 40px;
+    font-size: var(--font-size-medium); /* 使用变量 */
     padding: 100px 0 40px 0;
 }
 
@@ -177,17 +199,38 @@ main .contact .contact-styles ul {
     justify-content: space-around;
 }
 
+main .contact .contact-styles .QR {
+    display: flex;
+}
+
+main .contact .contact-styles .QR .QR_left,
+main .contact .contact-styles .QR .QR_right {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+main .contact .contact-styles .QR .QR_left img,
+main .contact .contact-styles .QR .QR_right img {
+    width: 25%;
+    height: auto;
+}
+
+main .contact .contact-styles .QR .QR_left p,
+main .contact .contact-styles .QR .QR_right p {
+    text-align: left;
+}
+
 main .contact .contact-styles ul li {
     margin: 50px;
     list-style: none;
 }
 
 main .contact .contact-styles ul li button {
-    width: 80px;
+    width: var(--button-width); /* 使用变量 */
     background: linear-gradient(45deg, #A8C1EF, #F9C2EA);
     padding: 10px;
     cursor: pointer;
-    /*border: none;*/
 }
 
 main .contact .contact-styles ul li button:hover {
@@ -201,6 +244,29 @@ main .contact .contact-styles ul li button i {
 
 main .contact .contact-styles ul li button p {
     margin-bottom: -5px;
+}
+
+main .advertise {
+    width: 100%;
+    height: var(--advertise-height); /* 使用变量 */
+    background: linear-gradient(#6F95F8, #5CBFC6);
+}
+
+main .advertise h2 {
+    text-align: center;
+    font-size: var(--font-size-medium); /* 使用变量 */
+    padding: 100px 0 40px 0;
+}
+
+main .advertise p {
+    margin-left: 20%;
+    margin-top: 40px;
+}
+
+main .advertise a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
 }
 
 body .icon {
@@ -223,17 +289,19 @@ body .icon button:hover {
 }
 
 body .icon button i {
-    font-size: 40px;
+    font-size: var(--icon-size); /* 使用变量 */
     margin-left: -2.5px;
 }
 
 footer {
     width: 100%;
-    height: 400px;
+    height: var(--footer-height); /* 使用变量 */
     background-color: #70727F;
+    display: flex;
 }
 
-footer .footer-left {
+footer .footer-left,
+footer .footer-right {
     width: 50%;
     height: 100%;
 }
@@ -245,8 +313,27 @@ footer .footer-left button {
     cursor: pointer;
 }
 
+footer .footer-left p,
+footer .footer-left h3 {
+    margin-left: 12%;
+    justify-content: center;
+}
+
+footer .footer-left h3 {
+    font-size: 140%;
+}
+
 footer .footer-left button img {
     width: 100%;
+}
+
+footer .footer-right h2 {
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+footer .footer-right p {
+    margin: 0 10%;
 }
 
 /* 添加媒体查询以适应不同屏幕尺寸 */
