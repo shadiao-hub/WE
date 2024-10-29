@@ -1,0 +1,104 @@
+body{
+	width: 100%;
+	height:100%;
+	background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
+}
+nav{
+	position: fixed;
+	width: 100%;
+	height: 8vh;
+	margin-top: -8px;
+	display: flex;
+	background-color: aqua;
+	justify-content: space-between;
+}
+.Navigation .Navigation-left,
+.Navigation .Navigation-right {
+    width: 30%;
+}
+.Navigation .Navigation-left h2{
+	font-size: 45px;
+	margin: auto 10px;
+}
+.Navigation .Navigation-right{
+	display: flex;
+	justify-content: flex-end;
+}
+.Navigation .Navigation-right img {
+    width: 120px;
+    height: 60px;
+	margin-right: 10px;
+}
+.Navigation .Navigation-center{
+	width: 40%;
+	border: solid;
+	border-color: aquamarine;
+}
+.Navigation .Navigation-center h2{
+	text-align: center;
+}
+main{
+	width:100%;
+	display: flex;
+}
+main .index{
+	position: fixed;
+	margin-top: 7vh;
+	width:5%;
+	height: 800px;
+	background-color:#9D82FF ;
+}
+main .index p{
+	font-size: 20px;
+	margin-left: 8px;
+	margin-top: 60px;
+}
+main .index p a,i{
+	text-decoration: none;
+	color:white;
+}
+main .station {
+    width: 95%;
+	margin-top: 7vh;
+	margin-left: 5%;
+}
+main .station .guanli{
+	width: 100%;
+	height:800px;
+	background-color: yellow;
+}
+main .station .caiwu{
+	width: 100%;
+	height:800px;
+	background-color: greenyellow;
+}
+main .station .renli{
+	width: 100%;
+	height:800px;
+	background-color: skyblue;
+}
+main .station .xiaoshou{
+	width: 100%;
+	height:800px;
+	background-color: pink;
+}
+main .station .chanpin{
+	width: 100%;
+	height:800px;
+	background-color: palevioletred;
+}
+main .station .yunying{
+	width: 100%;
+	height:800px;
+	background-color: plum;
+}
+main .station .kefu{
+	width: 100%;
+	height:800px;
+	background-color: papayawhip;
+}
+main .station .jishu{
+	width: 100%;
+	height:800px;
+	background-color: peru;
+}
