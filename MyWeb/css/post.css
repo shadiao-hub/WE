@@ -6,7 +6,7 @@ body{
 nav{
 	position: fixed;
 	width: 100%;
-	height: 8vh;
+	height: 8.5vh;
 	margin-top: -8px;
 	display: flex;
 	background-color: aqua;
@@ -31,8 +31,6 @@ nav{
 }
 .Navigation .Navigation-center{
 	width: 40%;
-	border: solid;
-	border-color: aquamarine;
 }
 .Navigation .Navigation-center h2{
 	text-align: center;
@@ -43,15 +41,25 @@ main{
 }
 main .index{
 	position: fixed;
-	margin-top: 7vh;
+	margin-top: 7.5vh;
 	width:5%;
-	height: 800px;
-	background-color:#9D82FF ;
+	height: 93vh;
+	background-color:#9D82FF;
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between; 
 }
+
 main .index p{
 	font-size: 20px;
 	margin-left: 8px;
-	margin-top: 60px;
+	flex-grow: 1; 
+}
+main button{
+	width: 80px;
+	position: fixed;
+	margin-top: 9vh;
+	margin-left: 6%;
 }
 main .index p a,i{
 	text-decoration: none;
@@ -59,46 +67,228 @@ main .index p a,i{
 }
 main .station {
     width: 95%;
-	margin-top: 7vh;
+	margin-top: 7.5vh;
 	margin-left: 5%;
 }
 main .station .guanli{
 	width: 100%;
-	height:800px;
-	background-color: yellow;
+	height:850px;
+	background: linear-gradient(135deg,#F8E1EB,#C5FDFA);
 }
+main .station .guanli .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .guanli .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .guanli .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .guanli .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .guanli .description .jianli p{
+	text-align: center;
+}
+main .station .guanli .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
 main .station .caiwu{
 	width: 100%;
-	height:800px;
-	background-color: greenyellow;
+	height:850px;
+	background: linear-gradient(135deg,#2AF599,#009FFB);
 }
+main .station .caiwu .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .caiwu .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .caiwu .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .caiwu .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .caiwu .description .jianli p{
+	text-align: center;
+}
+main .station .caiwu .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
 main .station .renli{
 	width: 100%;
-	height:800px;
-	background-color: skyblue;
+	height:850px;
+	background: linear-gradient(135deg,#79FDE5,#B6BAF5);
 }
+main .station .renli .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .renli .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .renli .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .renli .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .renli .description .jianli p{
+	text-align: center;
+}
+main .station .renli .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
+
+
 main .station .xiaoshou{
 	width: 100%;
-	height:800px;
-	background-color: pink;
+	height:850px;
+	background: linear-gradient(135deg,#A8AED7,#F79DB7);
 }
+main .station .xiaoshou .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .xiaoshou .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .xiaoshou .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .xiaoshou .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .xiaoshou .description .jianli p{
+	text-align: center;
+}
+main .station .xiaoshou .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
+
+
 main .station .chanpin{
 	width: 100%;
-	height:800px;
-	background-color: palevioletred;
+	height:850px;
+	background: linear-gradient(135deg,#E5D5CC,#928BDD);
 }
+main .station .chanpin .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .chanpin .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .chanpin .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .chanpin .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .chanpin .description .jianli p{
+	text-align: center;
+}
+main .station .chanpin .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
+
 main .station .yunying{
 	width: 100%;
-	height:800px;
-	background-color: plum;
+	height:850px;
+	background: linear-gradient(135deg,#F1E6B3,#F6CF12);
 }
+main .station .yunying .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .yunying .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .yunying .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .yunying .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .yunying .description .jianli p{
+	text-align: center;
+}
+main .station .yunying .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
+
 main .station .kefu{
 	width: 100%;
-	height:800px;
-	background-color: papayawhip;
+	height:850px;
+	background: linear-gradient(135deg,#26C4F5,#9D82FF);
 }
+main .station .kefu .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .kefu .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .kefu .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .kefu .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .kefu .description .jianli p{
+	text-align: center;
+}
+main .station .kefu .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
+}
+
+
 main .station .jishu{
 	width: 100%;
-	height:800px;
-	background-color: peru;
+	height:850px;
+	background: linear-gradient(135deg,#FDC05F,#F8730B);
+}
+main .station .jishu .description{
+	padding-top: 1.875rem;
+	padding-bottom: 1.25rem;
+}
+main .station .jishu .description h2{
+	text-align: center;
+	padding: 5vh;
+}
+main .station .jishu .description .gangwei{
+	margin: 5% 20%;
+}
+main .station .jishu .description .gangwei ol li{
+	margin-top: 15px;
+}
+main .station .jishu .description .jianli p{
+	text-align: center;
+}
+main .station .jishu .description .jianli .submit{
+	margin-left: 40%;
+	margin-bottom: 7.5vh;
 }

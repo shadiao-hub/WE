@@ -1,0 +1,226 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 8.5vh;
+    margin: 0;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.Navigation .Navigation-left,
+.Navigation .Navigation-right {
+    width: 30%;
+}
+
+.Navigation .Navigation-left h2 {
+    font-size: 45px;
+    margin: auto 10px;
+}
+
+.Navigation .Navigation-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Navigation .Navigation-right img {
+    width: 120px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.Navigation .Navigation-center {
+    width: 40%;
+}
+
+.Navigation .Navigation-center h2 {
+    text-align: center;
+}
+
+#back {
+    position: fixed;
+    width: 80px;
+    top: 9vh;
+    left: 1%;
+}
+
+main {
+    width: 100%;
+    padding-top: 8.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img {
+    width: 10%;
+    height: auto;
+    margin: 2vh 0;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 15px;
+}
+
+main .tiaozhuan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2vw;
+    margin-top: 5vh;
+}
+
+main .tiaozhuan-left,
+main .tiaozhuan-right {
+    width: 30%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+/* 社交媒体卡片整体样式 */
+.taktok,
+.QQ,
+.weixin,
+.email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* 左侧图标容器样式 */
+.taktok-left,
+.QQ-left,
+.weixin-left,
+.email-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 80px;  /* 确保图标区域有固定最小宽度 */
+}
+
+/* 图标样式 */
+.taktok-left i,
+.QQ-left i,
+.weixin-left i,
+.email-left i {
+    font-size: 50px;
+    text-align: center;
+}
+
+/* 官方文字样式 */
+.taktok-left p,
+.QQ-left p,
+.weixin-left p,
+.email-left p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 右侧信息容器样式 */
+.taktok-right,
+.QQ-right,
+.weixin-right,
+.email-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1rem;
+    flex: 1;  /* 占据剩余空间 */
+}
+
+/* 右侧文本样式 */
+.taktok-right h3,
+.QQ-right h3,
+.weixin-right h3,
+.email-right h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.taktok-right p,
+.QQ-right p,
+.weixin-right p,
+.email-right p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+    main .tiaozhuan {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .tiaozhuan-left,
+    main .tiaozhuan-right {
+        width: 80%;
+    }
+
+    main img {
+        width: 30%;
+    }
+
+    .Navigation .Navigation-center {
+        display: none;
+    }
+
+    .Navigation .Navigation-left,
+    .Navigation .Navigation-right {
+        width: 45%;
+    }
+
+    .Navigation .Navigation-left h2 {
+        font-size: 32px;
+    }
+
+    /* 调整社交媒体卡片在移动端的布局 */
+    .taktok,
+    .QQ,
+    .weixin,
+    .email {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .taktok-right,
+    .QQ-right,
+    .weixin-right,
+    .email-right {
+        padding-left: 0;
+        align-items: center;
+        margin-top: 1rem;
+    }
+}
+
+/* 大屏幕优化 */
+@media screen and (min-width: 1920px) {
+    main .tiaozhuan-left,
+    main .tiaozhuan-right {
+        width: 25%;
+    }
+
+    main img {
+        width: 8%;
+    }
+}

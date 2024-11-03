@@ -1,0 +1,93 @@
+body{
+	width: 100%;
+	height:100%;
+	background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
+}
+nav{
+	position: fixed;
+	width: 100%;
+	height: 8.5vh;
+	margin-top: -8px;
+	display: flex;
+	background-color: aqua;
+	justify-content: space-between;
+}
+.Navigation .Navigation-left,
+.Navigation .Navigation-right {
+    width: 30%;
+}
+.Navigation .Navigation-left h2{
+	font-size: 45px;
+	margin: auto 10px;
+}
+.Navigation .Navigation-right{
+	display: flex;
+	justify-content: flex-end;
+}
+.Navigation .Navigation-right img {
+    width: 120px;
+    height: 60px;
+	margin-right: 10px;
+}
+.Navigation .Navigation-center{
+	width: 40%;
+}
+.Navigation .Navigation-center h2{
+	text-align: center;
+}
+main{
+	width:100%;
+	display: flex;
+}
+main .index{
+	position: fixed;
+	margin-top: 7.5vh;
+	width:10%;
+	height: 93vh;
+	background-color:#9D82FF;
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between; 
+}
+
+main .index h3{
+	text-align: center;
+}
+main .index p{
+	font-size: 15px;
+	margin-left: 8px;
+	flex-grow: 1; 
+	text-align: center;
+}
+main button{
+	width: 80px;
+	position: fixed;
+	margin-top: 9.5vh;
+	margin-left: 11%;
+}
+main .index p a,i{
+	text-decoration: none;
+	color:white;
+}
+main .news {
+    width: 80%;
+	margin-top: 7vh;
+	margin-left: 15%;
+}
+main .news h1{
+	text-align: center;
+	margin-bottom: 80px;
+}
+main .news h1{
+	padding-top: 6.5%;
+	margin-bottom: 50px;
+}
+main .news p{
+	  text-indent: 2em;
+}
+main .news section {
+	display: none;
+}
+main .news section.active {
+	display: block;
+}

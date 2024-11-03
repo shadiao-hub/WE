@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1312164",
+      "name": "通知",
+      "font_class": "tongzhi",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "6080175",
+      "name": "投币",
+      "font_class": "toubi",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
       "icon_id": "3458425",
       "name": "部门和用户管理",
       "font_class": "bumenheyonghuguanli",

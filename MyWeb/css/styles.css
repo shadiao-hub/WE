@@ -132,7 +132,7 @@ nav {
 
 main .welcome {
     width: 100%;
-    height: auto;
+    height: 800px;
     min-height: var(--main-min-height); /* 使用变量 */
     background: linear-gradient(45deg, #A8C1EF, #F9C2EA);
 }
@@ -170,7 +170,7 @@ main .about .about-welcome {
 
 main .about .about-welcome .development {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 15%;
 }
 
 main .about .about-welcome .development ul li {
@@ -181,6 +181,7 @@ main .about .about-welcome .development ul li a {
     font-size: 20px;
     color: black;
     text-decoration: none;
+	cursor: pointer;
 }
 
 main .about .about-welcome .workplace {
@@ -198,6 +199,7 @@ main .about .about-welcome .workplace img {
 main .contact {
     width: 100%;
     height: var(--contact-height); /* 使用变量 */
+	background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
 }
 
 main .contact h2 {
@@ -221,6 +223,9 @@ main .contact .contact-styles .QR .QR_right {
     width: 50%;
     margin-top: 5%;
     margin-left: 20%;
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between; 
 }
 
 main .contact .contact-styles .QR .QR_left img,
@@ -241,7 +246,7 @@ main .contact .contact-styles ul li {
 
 main .contact .contact-styles ul li button {
     width: var(--button-width); /* 使用变量 */
-    background: linear-gradient(45deg, #A8C1EF, #F9C2EA);
+    background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
     padding: 10px;
     cursor: pointer;
 }
@@ -262,7 +267,7 @@ main .contact .contact-styles ul li button p {
 main .advertise {
     width: 100%;
     height: var(--advertise-height); /* 使用变量 */
-    background: linear-gradient(#6F95F8, #5CBFC6);
+    background: linear-gradient(75deg,#6F95F8, #5CBFC6);
 }
 
 main .advertise h2 {
@@ -283,15 +288,74 @@ main .advertise a {
     font-size: 20px;
     color: black;
     text-decoration: none;
+	cursor: pointer;
+}
+.advertise .advertise-content {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
 }
 
+.advertise .post-list {
+    width: 50%;
+    margin-left: 15%;
+}
+
+.advertise .ad-image-container {
+    width: 50%;
+    margin-left: -20%;
+    display: flex;
+    justify-content: center;
+}
+
+.advertise .ad-image {
+    width: 80%;
+    height: auto;
+}
+
+/* 保持原有的段落样式 */
+.advertise p {
+    margin-left: 0;  /* 覆盖原来的margin-left: 20% */
+    margin-top: 40px;
+}
+main .donate{
+	width: 100%;
+	height: 300px;
+	background: linear-gradient(45deg,#B5B4E7,#DED5E3);
+	display: flex;
+	flex-direction: column; 
+	justify-content: space-between;
+}
+main .donate h2,h3{
+	text-align: center;
+}
+main .donate button{
+	width: 20%;
+	height: 35px;
+	background-color: #F9C2EA;
+	margin: 0 auto;
+}
+main .donate button{
+	font-size: 20px;
+	color: #6F95F8;
+}
+main .donate button:hover {
+    background-color: #6F95F8;
+    color:#F9C2EA;
+}
 body .icon {
     position: fixed;
     top: 700px;
     right: 20px;
+    cursor: move;  /* 添加这行 */
+    user-select: none;  /* 添加这行 */
+    touch-action: none;  /* 添加这行 */
+    z-index: 1000;  /* 添加这行 */
 }
 
-body .icon button {
+/* 其他样式保持不变 */
+
+body .icon button { 
     width: 50px;
     height: 50px;
     background-color: lightblue;
@@ -311,7 +375,6 @@ body .icon button i {
 
 footer {
     width: 100%;
-    height: var(--footer-height); /* 使用变量 */
     background-color: #70727F;
     display: flex;
 }
@@ -329,10 +392,9 @@ footer .footer-left button {
     cursor: pointer;
 }
 
-footer .footer-left p,
-footer .footer-left h3 {
+footer .footer-left p {
     margin-left: 12%;
-    justify-content: center;
+	
 }
 
 footer .footer-left h3 {
@@ -344,7 +406,7 @@ footer .footer-left button img {
 }
 
 footer .footer-right h2 {
-    margin-top: 4%;
+    margin-top: 3%;
     margin-left: 10%;
 }
 

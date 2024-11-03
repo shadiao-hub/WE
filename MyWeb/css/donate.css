@@ -1,0 +1,198 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(75deg, #A8C1EF, #F9C2EA);
+}
+
+nav {
+    width: 100%;
+    height: 8.5vh;
+    margin-top: -8px;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+}
+
+.Navigation .Navigation-left,
+.Navigation .Navigation-right {
+    width: 30%;
+}
+
+.Navigation .Navigation-left h2 {
+    font-size: 45px;
+    margin: auto 10px;
+}
+
+.Navigation .Navigation-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Navigation .Navigation-right img {
+    width: 120px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.Navigation .Navigation-center {
+    width: 40%;
+}
+
+.Navigation .Navigation-center h2 {
+    text-align: center;
+}
+
+#back {
+    width: 80px;
+    position: fixed;
+    margin-top: 6.5vh;
+    margin-left: 3%;
+}
+
+.notice-area {
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: chartreuse;
+    height: 21px;
+}
+
+.notice-area i {
+    color: slateblue;
+    padding: 3px;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.scroll-container {
+    flex: 1;
+    overflow: hidden;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 2px;
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0;
+    animation: scroll-left 8s linear infinite;
+}
+
+.scroll-text p {
+    color: slateblue;
+    font-size: 12px;
+    margin: 0;
+    display: inline-block;
+    line-height: 15px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(90vw);
+    }
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .money {
+    width: 30%;
+    min-height: 80px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: margin 0.3s ease;
+}
+
+main .money h2 {
+    text-align: center;
+}
+
+main .money button {
+    width: 60%;
+    font-size: 20px;
+    height: 40px;
+    margin-left: 20%;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.qr-container.active {
+    height: 180px;
+    margin: 20px 0;
+}
+
+.qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.qr-item img {
+    width: 120px;
+    height: 120px;
+    display: none;
+    object-fit: contain;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.pay-text {
+    font-size: 12px;
+    display: none;
+}
+/* 现有的 CSS 保持不变，添加以下代码 */
+
+/* 默认状态的容器高度调整 */
+.qr-container.active {
+    height: 180px;
+    margin: 20px 0;
+}
+
+/* 媒体查询：当容器宽度小于 300px 时切换为垂直布局 */
+@media screen and (max-width: 300px) {
+    .qr-container {
+        flex-direction: column; /* 改为垂直方向 */
+        gap: 10px; /* 增加垂直间距 */
+    }
+    
+    .qr-container.active {
+        height: 340px; /* 增加高度以适应垂直排列 (2张图片的高度 + 间距) */
+    }
+}
+
+/* 更大范围的媒体查询：当设备宽度小于 768px 时调整整体布局 */
+@media screen and (max-width: 768px) {
+    main .money {
+        width: 45%; /* 减小宽度以适应较小屏幕 */
+    }
+}
+
+/* 更小设备的媒体查询 */
+@media screen and (max-width: 480px) {
+    main .money {
+        width: 90%; /* 在很小的屏幕上占据大部分宽度 */
+    }
+}

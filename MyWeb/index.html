@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./iconfont/iconfont.css">
 		<link rel="stylesheet" href="./css/styles.css" />
-		<link rel="stylesheet" href="./images" />
 		<link rel="icon" href="https://pic.imgdb.cn/item/66d42a34d9c307b7e94701a2.jpg" type="image/jpg">
+		<script src="javascript/index.js"></script>
 		<title>WE</title>
 	</head>
 	<body>
@@ -13,7 +13,12 @@
 			<div class="Navigation-left">
 				<img src="./images/logo.jpg" />
 			</div>
-			<div class="Navigation-center"><input type="text" placeholder="   请输入搜索内容"/><button><i class="iconfont icon-sousuo"></i></button></div>
+			<div class="Navigation-center">
+			    <input type="text" id="searchInput" placeholder="   请输入搜索内容"/>
+			    <button onclick="performSearch()">
+			        <i class="iconfont icon-sousuo"></i>
+			    </button>
+			</div>
 			<div class="Navigation-right">
 			<div class="placeholder-button"><p> </p></div>
 			<div class="buttons">
@@ -23,20 +28,39 @@
 			</div>
 		</nav>
 		<main>
-			<div class="welcome">
+			<div class="welcome" id="welcome">
 				<p id="p-first">Welcome to join us!</p>
 				<h1>WE</h1>
 				<p id="p-last">change the world</p>
 			</div>
-			<div class="about">
+			
+			<div class="advertise" id="advertise">
+			    <h2>我们的岗位</h2>
+			    <div class="advertise-content">
+			        <div class="post-list">
+			            <p><i class="iconfont icon-bumenheyonghuguanli">  </i><a onclick="location.href='post.html#guanli'">高级管理岗位</a></p>
+			            <p><i class="iconfont icon-caiwubumen">  </i><a onclick="location.href='post.html#caiwu'">财务部门</a></p>
+			            <p><i class="iconfont icon-danganchaxun">  </i><a onclick="location.href='post.html#renli'">人力资源部门</a></p>
+			            <p><i class="iconfont icon-woyaofenxiao">  </i><a onclick="location.href='post.html#xiaoshou'">销售与市场部门</a></p>
+			            <p><i class="iconfont icon-jishubumen">  </i><a onclick="location.href='post.html#chanpin'">产品开发与技术部门</a></p>
+			            <p><i class="iconfont icon-a-6-2yunyingbumenguanli">  </i><a onclick="location.href='post.html#yunying'">运营部门</a></p>
+			            <p><i class="iconfont icon-kefu">  </i><a onclick="location.href='post.html#kefu'">客户服务部门</a></p>
+			            <p><i class="iconfont icon-ITjishurenyuan">  </i><a onclick="location.href='post.html#jishu'">IT与技术支持部门</a></p>
+			        </div>
+			        <div class="ad-image-container">
+			            <img src="./images/gangwei.png" class="ad-image" />
+			        </div>
+			    </div>
+			</div>
+			<div class="about" id="news">
 				<h2>我们的发展历程</h2>
 				<div class="about-welcome">
 				<div class="development">
 					<ul>
-						<li><a href="www.we.develop.com">2024年9月14日我们成立了</a></li>
-						<li><a href="www.we.com">欢迎加入WE的家庭</a></li>
-						<li><a href="www.we.com">从ME到WE，你不再是一个人</a></li>
-						<li><a href="www.we.com">欢迎每个人的到来</a></li>
+						<li><a onclick="location.href='news.html'">"改变世界"的启航</a></li>
+						<li><a onclick="location.href='news.html#news2'">携手共创未来</a></li>
+						<li><a onclick="location.href='news.html'">从ME到WE，你不再是一个人</a></li>
+						<li><a onclick="location.href='news.html'">加入WE，共创未来</a></li>
 					</ul>
 				</div>
 				<div class="workplace">
@@ -44,25 +68,14 @@
 				</div>
 				</div>
 			</div>
-			<div class="advertise">
-				<h2>我们的岗位</h2>
-				<p><i class="iconfont icon-bumenheyonghuguanli">  </i><a onclick="location.href='post.html'">高级管理岗位</a></p>
-				<p><i class="iconfont icon-caiwubumen">  </i><a onclick="location.href='post.html'">财务部门</a></p>
-				<p><i class="iconfont icon-danganchaxun">  </i><a onclick="location.href='post.html'">人力资源部门</a></p>
-				<p><i class="iconfont icon-woyaofenxiao">  </i><a onclick="location.href='post.html'">销售与市场部门</a></p>
-				<p><i class="iconfont icon-jishubumen">  </i><a onclick="location.href='post.html'">产品开发与技术部门</a></p>
-				<p><i class="iconfont icon-a-6-2yunyingbumenguanli">  </i><a onclick="location.href='post.html'">运营部门</a></p>
-				<p><i class="iconfont icon-kefu">  </i><a onclick="location.href='post.html'">客户服务部门</a></p>
-				<p><i class="iconfont icon-ITjishurenyuan">  </i><a onclick="location.href='post.html'">IT与技术支持部门</a></p>
-			</div>
-			<div class="contact">
+			<div class="contact" id="contact">
 				<h2>加入WE的大家庭</h2>
 				<div class="contact-styles">
 					<ul>
-						<li><button><i class="iconfont icon-douyin"></i><p>抖音</p></button></li>
-						<li><button><i class="iconfont icon-qq"></i><p>QQ</p></button></li>
-						<li><button><i class="iconfont icon-weixin"></i><p>微信</p></button></li>
-						<li><button><i class="iconfont icon-youxiang"></i><p>Email</p></button></li>
+						<li><button onclick="location.href='contact.html'"><i class="iconfont icon-douyin"></i><p>抖音</p></button></li>
+						<li><button onclick="location.href='contact.html'"><i class="iconfont icon-qq"></i><p>QQ</p></button></li>
+						<li><button onclick="location.href='contact.html'"><i class="iconfont icon-weixin"></i><p>微信</p></button></li>
+						<li><button onclick="location.href='contact.html'"><i class="iconfont icon-youxiang"></i><p>Email</p></button></li>
 					</ul>
 					<div class="QR">
 						<div class="QR_left"><img src="./images/QR.jpg" /><p>扫描二维码关注公众号WE</p></div>
@@ -70,32 +83,42 @@
 					</div>
 				</div>
 			</div>
-			
-		</main>
-		<div class="icon"><button><i class="iconfont icon-huidaodingbu"></i></button></div>
-		
-	</body>
-	<footer>
-		<div class="footer-left"><button><img src="./images/logo.jpg"/></button>
-		<p>WE创建于2024的9月14日，一个念头在我们的心里发芽。</p>
-		<p>科技改变未来! </p>
-		<h3>We change the world!</h3>
-		</div>
-		<div class="footer-right">
-			<div class="corporate_culture">
-				<h2><strong>MISSION</strong></h2>
-			<p>我们不仅仅是一家企业，我们是变革的推动者。
-			我们相信，通过创新和合作，我们可以解决世界上最棘手的问题。
-			我们的使命是激发和赋能每一个WE的成员，让他们成为改变世界的力量。</p>
-			<h2><strong>DREAM</strong></h2>
-			<p>我们看到一个世界，其中每个人都能够实现自己的潜力，共同为
-			社会的进步做出贡献。在WE，我们不仅追求商业的成功，更追求社会的
-			进步和环境的可持续性。</p>
-			<h2><strong>JOIN US</strong></h2>
-			<p>如果你渴望成为改变世界的一部分，WE是你的理想之地。我们提供
-			一个充满激情、创新和合作精神的工作环境。在这里，你将与志同道合的人
-			一起工作，共同实现我们的目标。</p>
+			<div class="donate" id="donate">
+				<h2>WE的发展离不开大家的支持</h2>
+				<h3>您的支持是WE坚持的动力</h3>
+				<button onclick="location.href='donate.html'"><strong><i class="iconfont icon-toubi"></i>    支持一下</strong></button>
+				<h3>支持是自发行为，不承担后果，感谢支持</h3>
 			</div>
+		</main>
+		<div class="icon" id="draggableIcon">
+		    <button id="topButton">
+		        <i class="iconfont icon-huidaodingbu"></i>
+		    </button>
 		</div>
-	</footer>
+
+		<footer>
+			<div class="footer-left">
+				<button><img src="./images/logo.jpg"/></button>
+				<p>WE创建于2024的9月14日，一个念头在我们的心里发芽。</p>
+				<p>科技改变未来! </p>
+				<p style="font-size: 25px;"><strong>We change the world!</strong></p>
+			</div>
+			<div class="footer-right">
+				<div class="corporate_culture">
+					<h2><strong>MISSION</strong></h2>
+					<p>我们不仅仅是一家企业，我们是变革的推动者。
+					我们相信，通过创新和合作，我们可以解决世界上最棘手的问题。
+					我们的使命是激发和赋能每一个WE的成员，让他们成为改变世界的力量。</p>
+					<h2><strong>DREAM</strong></h2>
+					<p>我们看到一个世界，其中每个人都能够实现自己的潜力，共同为
+					社会的进步做出贡献。在WE，我们不仅追求商业的成功，更追求社会的
+					进步和环境的可持续性。</p>
+					<h2><strong>JOIN US</strong></h2>
+					<p>如果你渴望成为改变世界的一部分，WE是你的理想之地。我们提供
+					一个充满激情、创新和合作精神的工作环境。在这里，你将与志同道合的人
+					一起工作，共同实现我们的目标。</p>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
