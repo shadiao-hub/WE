@@ -264,59 +264,43 @@ main .contact .contact-styles ul li button p {
     margin-bottom: -5px;
 }
 
-main .advertise {
+main .adv {
     width: 100%;
     height: var(--advertise-height); /* 使用变量 */
     background: linear-gradient(75deg,#6F95F8, #5CBFC6);
 }
-
-main .advertise h2 {
+main .adv .advertise-content{
+	display: flex;
+}
+main .adv .advertise-content .post-list{
+	width: 50%;
+}
+main .adv  h2 {
     text-align: center;
     font-size: var(--font-size-medium); /* 使用变量 */
     padding: 100px 0 40px 0;
 }
-
-main .advertise p {
-    margin-left: 20%;
-    margin-top: 40px;
+main .adv .advertise-content .post-list p {
+    margin-left: 50%;
+    margin-top: 30px;
 }
-main .advertise i{
+main .adv .advertise-content .post-list i{
 	font-size: 25px;
 }
-
-main .advertise a {
+main .adv .advertise-content .post-list a {
     font-size: 20px;
     color: black;
     text-decoration: none;
 	cursor: pointer;
 }
-.advertise .advertise-content {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.advertise .post-list {
-    width: 50%;
-    margin-left: 15%;
-}
-
-.advertise .ad-image-container {
-    width: 50%;
-    margin-left: -20%;
-    display: flex;
-    justify-content: center;
-}
-
-.advertise .ad-image {
-    width: 80%;
+main .adv .advertise-content .ad-image-container{
+	width:50%;
     height: auto;
 }
-
-/* 保持原有的段落样式 */
-.advertise p {
-    margin-left: 0;  /* 覆盖原来的margin-left: 20% */
-    margin-top: 40px;
+main .adv .advertise-content .ad-image-container img{
+	margin-top: 5vh;
+	width: 80%;
+	height: auto;
 }
 main .donate{
 	width: 100%;
@@ -413,4 +397,3 @@ footer .footer-right h2 {
 footer .footer-right p {
     margin: 0 10%;
 }
-
